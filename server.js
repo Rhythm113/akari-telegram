@@ -28,12 +28,7 @@ bot.on('message', (ctx) => axios
 )
 bot.on('sticker', (ctx) => ctx.reply('👍'))
 
-bot.launch({
-  webhook: {
-    domain: 'localhost',
-    port: process.env.PORT || 5000
-  }
-})
+bot.launch()
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
