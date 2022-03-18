@@ -25,7 +25,7 @@ bot.on('message', (ctx) => axios
   console.log(`Reply: ${res.data.reply}`)
 })
 .catch(error => {
-  ctx.telegram.sendMessage(ctx.message.chat.id, "Server Error !")
+  ctx.telegram.sendMessage(ctx.message.chat.id, "Invalid Command or Internal Error")
   console.error(error)
 })
 )
