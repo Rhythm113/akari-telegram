@@ -1,7 +1,6 @@
 const { Telegraf, Markup } = require('telegraf')
 const axios = require('axios')
 
-//const bot = new Telegraf("1370810534:AAFL0jZUnzmC7_muqiiT2L-_5wDMItqIziA");
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.command('start', ctx => {
@@ -12,7 +11,7 @@ bot.command('start', ctx => {
 
 bot.command('id', ctx => {
     console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, "Current Chat ID : ${ctx.chat.id}" , {
+    bot.telegram.sendMessage(ctx.chat.id, `Current Chat ID : ${ctx.chat.id}` , {
     })
 })
 
