@@ -27,6 +27,16 @@ bot.on('message', (ctx) => axios
 })
 )
 bot.on('sticker', (ctx) => ctx.reply('👍'))
+const http = require('http');
+
+const requestListener = function (req, res) {
+  res.writeHead(200);
+  res.end('Hello, World!');
+}
+
+const server = http.createServer(requestListener);
+server.listen(process.env.PORT || 8080);
+console.log("Server Running")
 
 bot.launch()
 // Enable graceful stop
