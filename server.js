@@ -17,9 +17,9 @@ bot.on('message', (ctx) => axios
 .get('https://www.kukiapi.xyz/api/akari/' + encodeURI(ctx.message.from.first_name) + '/message=' + encodeURI(ctx.message.text))
 .then(res => {
   ctx.telegram.sendMessage(ctx.message.chat.id, res.data.reply)
-  console.log(`message: ${res.data.reply}`)
   //console.log(res)
-  console.log(ctx.message)
+  console.log("Message : " + ctx.message.text)
+  console.log(`Reply: ${res.data.reply}`)
 })
 .catch(error => {
   ctx.telegram.sendMessage(ctx.message.chat.id, "Server Error !")
