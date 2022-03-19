@@ -19,7 +19,11 @@ bot.command('id', ctx => {
 bot.on('message', (ctx) => axios
 .get('https://www.kukiapi.xyz/api/akari/' + encodeURI(ctx.message.from.first_name)  + `/message="${encodeURI(ctx.message.text)}"`)
 .then(res => {
+    try{
   ctx.telegram.sendMessage(ctx.message.chat.id, res.data.reply)
+         catch (error) {
+    console.log(error);
+  }
   //console.log(res)
   console.log("Message : " + ctx.message.text)
   console.log(`Reply: ${res.data.reply}`)
