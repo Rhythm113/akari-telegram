@@ -32,7 +32,7 @@ bot.on('message', (ctx) => axios
 )
 bot.on('sticker', (ctx) => ctx.reply('👍'))
 const http = require('http');
-
+//Listener
 const requestListener = function (req, res) {
   res.writeHead(200);
   res.end('BOT Up & Running..');
@@ -42,6 +42,13 @@ const server = http.createServer(requestListener);
 server.listen(process.env.PORT || 8080);
 console.log("Server Running")
 
+//Loop to keep the BOT alive
+while(true){
+    sleep(60000, function() {
+  console.log("Alive Task Running")
+});}
+
+//Launch
 bot.launch()
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'))
