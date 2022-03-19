@@ -47,7 +47,7 @@ bot.launch()
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
 //Keep Alive the node 
-var http = require("http");
+var http2 = require("http");
 setInterval(function() {
     http.get("http://akari-telegram.herokuapp.com");
     console.log("I'm Alive hehe")
