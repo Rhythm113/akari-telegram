@@ -41,7 +41,11 @@ const requestListener = function (req, res) {
 const server = http.createServer(requestListener);
 server.listen(process.env.PORT || 8080);
 console.log("Server Running")
-
+//Launch
+bot.launch()
+// Enable graceful stop
+process.once('SIGINT', () => bot.stop('SIGINT'))
+process.once('SIGTERM', () => bot.stop('SIGTERM'))
 //Loop to keep the BOT alive
 function sleep(time, callback) {
     var stop = new Date().getTime();
@@ -54,9 +58,3 @@ while(true){
     sleep(60000, function() {
   console.log("Alive Task Running")
 });}
-
-//Launch
-bot.launch()
-// Enable graceful stop
-process.once('SIGINT', () => bot.stop('SIGINT'))
-process.once('SIGTERM', () => bot.stop('SIGTERM'))
