@@ -43,6 +43,13 @@ server.listen(process.env.PORT || 8080);
 console.log("Server Running")
 
 //Loop to keep the BOT alive
+function sleep(time, callback) {
+    var stop = new Date().getTime();
+    while(new Date().getTime() < stop + time) {
+        ;
+    }
+    callback();
+}
 while(true){
     sleep(60000, function() {
   console.log("Alive Task Running")
