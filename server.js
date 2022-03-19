@@ -21,6 +21,7 @@ bot.on('message', (ctx) => axios
 .then(res => {
     try{
   ctx.telegram.sendMessage(ctx.message.chat.id, res.data.reply)
+    }
          catch (error) {
     console.log(error);
   }
