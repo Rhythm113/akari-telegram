@@ -46,15 +46,3 @@ bot.launch()
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
-//Loop to keep the BOT alive
-function sleep(time, callback) {
-    var stop = new Date().getTime();
-    while(new Date().getTime() < stop + time) {
-        ;
-    }
-    callback();
-}
-while(true){
-    sleep(60000, function() {
-  console.log("Alive Task Running")
-});}
