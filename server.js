@@ -26,7 +26,7 @@ bot.on('message', (ctx) => axios
 })
 .catch(error => {
   ctx.telegram.sendMessage(ctx.message.chat.id, "Invalid Command or Internal Error")
-  console.error(error)
+  console.log(error)
 })
 )
 bot.on('sticker', (ctx) => ctx.reply('👍'))
