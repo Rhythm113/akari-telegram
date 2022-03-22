@@ -34,7 +34,7 @@ bot.on('message', (ctx) => axios
 })
 ) */
 //--------Break------------------------------------------------------//
-bot.on('message', (ctx) =>   ctx.telegram.sendMessage(ctx.message.chat.id, "BOT is under Maintenence. It will be back soon :)").catch((err) => console.log(err))
+bot.on('message', (ctx) =>   ctx.telegram.sendMessage(ctx.message.chat.id, "BOT is under Maintenence. It will be back soon :)").catch((err) => console.log(err)))
 
 //--------------------------------------------------------------------//
 bot.on('sticker', (ctx) => ctx.reply('👍'))
