@@ -18,7 +18,7 @@ bot.command('id', ctx => {
 })
 
 //------------------------API-----------------------//
-/*
+
 bot.on('message', (ctx) => axios
 .get('https://www.kukiapi.xyz/api/akari/' + encodeURI(ctx.message.from.first_name)  + `/message="${encodeURI(ctx.message.text)}"`)
 .then(res => {
@@ -32,10 +32,11 @@ bot.on('message', (ctx) => axios
   ctx.telegram.sendMessage(ctx.message.chat.id, "Invalid Command or Internal Error")
   console.log(error)
 })
-) */
+) 
 //--------Break------------------------------------------------------//
+/*
 bot.on('message', (ctx) =>   ctx.telegram.sendMessage(ctx.message.chat.id, "BOT is under Maintenence. It will be back soon :)").catch((err) => console.log(err)))
-
+*/
 //--------------------------------------------------------------------//
 bot.on('sticker', (ctx) => ctx.reply('👍'))
 const http = require('http');
