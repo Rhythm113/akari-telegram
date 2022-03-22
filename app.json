@@ -1,0 +1,8 @@
+{
+  "name": "Akari Telegram BOT",
+  "description": "Mechine Learning A.I Chat BOT usig cleverbot",
+  "repository": "https://github.com/Rhythm113/akari-telegram/",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": "",
+  "image": "heroku/nodejs"
+}
