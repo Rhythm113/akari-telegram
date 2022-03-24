@@ -1,7 +1,7 @@
 # Akari-Telegram (Version 1)
 <b> <i> Akari Telegram BOT Mechine Learning Node JS BOT </b> </i>
 
-<b> Link :</b> <a href="https://t.me/AkariChatBot"> t.me/AkariChatBot </a>
+<b> Link :</b> <a href="https://t.me/AkariChatBot"> t.me/AkariChatBot </a> (Running on API Version 2)
 
 # To DO : <br>
 *Exeption Handeling (Done) <br>
@@ -26,4 +26,6 @@ Deploy now :)
 
 *Now enjoy your new GF :3
 
-
+# Note :
+This BOT source is for testing purpose only so it may make mistakes in reply.
+This Project (Version 1) Won't be developed or revised anymore.
