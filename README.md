@@ -1,5 +1,5 @@
 # Akari-Telegram (Version 1)
-<b> <i> Akari Telegram BOT Mechine Learning Node JS BOT (Implementation of <a href="kukiapi.xyz">Kuki API </a> )</b> </i>
+<b> <i> Akari Telegram BOT Mechine Learning Node JS BOT (Implementation of <a href="https://kukiapi.xyz">Kuki API </a> )</b> </i>
 
 <b> Link :</b> <a href="https://t.me/AkariChatBot"> t.me/AkariChatBot </a> (Running on API Version 2)
 
