@@ -29,3 +29,9 @@ Deploy now :)
 # Note :
 This BOT source is for testing purpose only so it may make mistakes in reply.
 This Project (Version 1) Won't be developed or revised anymore.
+
+# Version 1 Credits :
+
+MetaVoid API (TG: @MetaVoid)
+
+Infinity Creators (TG: @Infinitycreators1)
