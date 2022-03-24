@@ -1,11 +1,11 @@
-# Akari-Telegram
+# Akari-Telegram (Version 1)
 <b> <i> Akari Telegram BOT Mechine Learning Node JS BOT </b> </i>
 
 <b> Link :</b> <a href="https://t.me/AkariChatBot"> t.me/AkariChatBot </a>
 
 # To DO : <br>
-*Exeption Handeling <br>
-*Utilities
+*Exeption Handeling (Done) <br>
+*Utilities (Done)
 
 
 # Need the same BOT ?
