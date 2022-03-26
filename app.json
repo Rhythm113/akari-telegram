@@ -9,15 +9,15 @@
     "BOT_NAME": {
             "description": "The name for the BOT",
             "required": true
-        }
+        },
       "OWNER_NAME": {
             "description": "The name for /start command",
             "required": true
-        }
+        },
        "BOT_TOKEN": {
             "description": "telegram bot token here",
             "required": true
-        },
+        }
      
   }
 }
