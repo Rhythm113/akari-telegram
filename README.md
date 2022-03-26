@@ -22,8 +22,6 @@ Deploy now :)
 
 *Deploy the app.
 
-*Open heroku app settings & add a Config var named "BOT_TOKEN" & set the value to your BOT Token .
-
 *Now enjoy your new GF :3
 
 # Note :
