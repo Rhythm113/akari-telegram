@@ -6,12 +6,16 @@
   "keywords": "",
   "image": "heroku/nodejs",
   "env": {
+    "APP_NAME": {
+            "description": "The app name you gave in the name field",
+            "required": true
+        },
     "BOT_NAME": {
             "description": "The name for the BOT",
             "required": true
         },
       "OWNER_NAME": {
-            "description": "The name for /start command",
+            "description": "The Owner name for /start command",
             "required": true
         },
        "BOT_TOKEN": {
