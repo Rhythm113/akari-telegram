@@ -50,7 +50,7 @@ const requestListener = function (req, res) {
 const server = http.createServer(requestListener);
 server.listen(process.env.PORT || 8080);
 console.log("Server Running")
-console.log(`app url : ${process.env.HEROKU_URL}`)
+console.log(`app url :http://${process.env.HEROKU_APP_NAME}.herokuapp.com`)
 //--------------Engine----------------------------------------------//
 bot.launch()
 // Enable graceful stop
@@ -60,6 +60,6 @@ process.once('SIGTERM', () => bot.stop('SIGTERM'))
 //Keep Alive the node
 var http2 = require("http");
 setInterval(function() {
-    http.get(process.env.HEROKU_URL);
+    http.get`(http://${process.env.HEROKU_APP_NAME}.herokuapp.com`);
     console.log("I'm Alive hehe")
 }, 300000);
