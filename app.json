@@ -14,4 +14,5 @@
             "description": "The name for /start command",
             "required": true
         }
+  }
 }
