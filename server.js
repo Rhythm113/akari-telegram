@@ -50,6 +50,7 @@ const requestListener = function (req, res) {
 const server = http.createServer(requestListener);
 server.listen(process.env.PORT || 8080);
 console.log("Server Running")
+console.log(`app url : http://${process.env.HEROKU_APP_NAME}.herokuapp.com`)
 //--------------Engine----------------------------------------------//
 bot.launch()
 // Enable graceful stop
