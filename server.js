@@ -2,23 +2,6 @@ const { Telegraf, Markup } = require('telegraf')
 const axios = require('axios')
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
-//---------Inital Setup-------------------------//
-
-
-if(process.env.HEROKU_URL == null){
-var exec = require('child_process').exec;
-
-exec('heroku config:set HEROKU_URL=$(heroku info -s | grep web_url | cut -d= -f2)',
-    function (error, stdout, stderr) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
-        if (error !== null) {
-             console.log('exec error: ' + error);
-        }
-    });
-}else{
-    console.log("Welcome..")
-}
 
 //----------Commands-----------------------------//
 
