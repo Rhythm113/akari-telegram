@@ -60,6 +60,6 @@ process.once('SIGTERM', () => bot.stop('SIGTERM'))
 //Keep Alive the node
 var http2 = require("http");
 setInterval(function() {
-    http.get`(http://${process.env.HEROKU_APP_NAME}.herokuapp.com`);
+    http.get(`http://${process.env.HEROKU_APP_NAME}.herokuapp.com`);
     console.log("I'm Alive hehe")
 }, 300000);
