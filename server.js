@@ -7,7 +7,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.command('start', ctx => {
     console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, "hello there! I'm Akari. Mechine Learning AI ChatBOT. I'm created by @InfintyCreators1.", {
+    bot.telegram.sendMessage(ctx.chat.id, `hello there! I'm ${process.env.BOT_NAME}. Mechine Learning AI ChatBOT. My owner is ${process.env.OWNER_NAME}.`, {
     })
 })
 
@@ -59,6 +59,6 @@ process.once('SIGTERM', () => bot.stop('SIGTERM'))
 //Keep Alive the node
 var http2 = require("http");
 setInterval(function() {
-    http.get("http://akari-telegram.herokuapp.com");
+    http.get(`http://${process.env.HEROKU_APP_NAME}.herokuapp.com`);
     console.log("I'm Alive hehe")
 }, 300000);
