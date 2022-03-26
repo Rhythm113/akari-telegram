@@ -2,6 +2,23 @@ const { Telegraf, Markup } = require('telegraf')
 const axios = require('axios')
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
+//---------Inital Setup-------------------------//
+
+
+if(process.env.HEROKU_URL == null){
+var exec = require('child_process').exec;
+
+exec('heroku config:set HEROKU_URL=$(heroku info -s | grep web_url | cut -d= -f2)',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+}else{
+    console.log("Welcome..")
+}
 
 //----------Commands-----------------------------//
 
@@ -50,7 +67,7 @@ const requestListener = function (req, res) {
 const server = http.createServer(requestListener);
 server.listen(process.env.PORT || 8080);
 console.log("Server Running")
-console.log(`app url : http://${process.env.HEROKU_APP_NAME}.herokuapp.com`)
+console.log(`app url : ${process.env.HEROKU_URL}`)
 //--------------Engine----------------------------------------------//
 bot.launch()
 // Enable graceful stop
@@ -60,6 +77,6 @@ process.once('SIGTERM', () => bot.stop('SIGTERM'))
 //Keep Alive the node
 var http2 = require("http");
 setInterval(function() {
-    http.get(`http://${process.env.HEROKU_APP_NAME}.herokuapp.com`);
+    http.get(process.env.HEROKU_URL);
     console.log("I'm Alive hehe")
 }, 300000);
