@@ -18,6 +18,10 @@
             "description": "The Owner name for /start command",
             "required": true
         },
+    "API_TOKEN": {
+            "description": "Go to t.me/Kukichatbot & type /token to get your token",
+            "required": true
+        },
        "BOT_TOKEN": {
             "description": "telegram bot token here",
             "required": true
