@@ -20,7 +20,7 @@ bot.command('id', ctx => {
 //------------------------API-----------------------//
 
 bot.on('message', (ctx) => axios
-.get('https://www.kukiapi.xyz/api/akari/' + encodeURI(ctx.message.from.first_name)  + `/message="${encodeURI(ctx.message.text)}"`)
+.get('https://www.kukiapi.xyz/api/apikey=' + process.env.API_TOKEN + '/' + process.env.BOT_NAME + '/' + encodeURI(ctx.message.from.first_name)  + `/message="${encodeURI(ctx.message.text)}"`)
 .then(res => {
 
   ctx.telegram.sendMessage(ctx.message.chat.id, res.data.reply).catch((err) => console.log(err))
